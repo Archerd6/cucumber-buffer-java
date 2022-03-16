@@ -27,5 +27,4 @@ public class StepDefinitions
     	// Write code here that turns the phrase above into concrete actions
     	assertEquals("growl", belly.growl());
     }
-    
 }
