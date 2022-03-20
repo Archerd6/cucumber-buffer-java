@@ -1,4 +1,4 @@
-# cucumber-calculadora-java
+# cucumber-buffer-java
 ## David Ramírez
 #### Especificación de pruebas usando Cucumber y Gherkin 
 
