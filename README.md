@@ -1,43 +1,38 @@
 # cucumber-calculadora-java
 ## David Ramírez
-#### Proyecto de buffer - Especificación de pruebas usando Cucumber y Gherkin 
+#### Especificación de pruebas usando Cucumber y Gherkin 
 
-#### El archivo *Test.feature* contiene todas las pruebas como distintos scenarios
+#### El archivo *Test.feature* contiene todas las pruebas como distintos escenarios
 
-- *Suma*: Contiene pruebas del método Calculadora.suma()    &nbsp; &nbsp; &nbsp;    **Escenario Outline**\
-Estructura:\
-   Scenario Outline: Suma\
-   Given I have a Calculator\
-   When I sum <a> and <b>\
-   Then the result is <value>
+- *Put*: Contiene pruebas del método BufferAcotado.put()    &nbsp; &nbsp; &nbsp;    **Escenario Outline**\
+    Given I have a <string>buffer with a capacity of 5\
+    When I add a "element"\
+    Then It is added to the buffer
 
-- *Resta*: Contiene pruebas del método Calculadora.resta()    &nbsp; &nbsp; &nbsp;    **Escenario**\
-Estructura:\
-   Scenario: Resta\
-   Given I have a Calculator\
-   When I substract 88 value 8\
-   Then the result is 80
+- *Size*: Contiene pruebas que comprueban el tamaño del buffer    &nbsp; &nbsp; &nbsp;    **Escenario**\
+    Given I have a <string>buffer with a capacity of 3\
+    When I add a "first string"\
+    When I add a "second string"\
+    When I add a "third string"\
+    Then The size should be full
 
-- *Multiplicacion*: Contiene pruebas del método Calculadora.mult()    &nbsp; &nbsp; &nbsp;    **Escenario**\
-Estructura:\
-    Given I have a Calculator\
-    When I multiply 88 value 8\
-    Then the result is 704
+- *Get*: Contiene pruebas del método BufferAcotado.get()    &nbsp; &nbsp; &nbsp;    **Escenario**\
+    Given I have a <string>buffer with a capacity of 8\
+    When I add the first element "first string"\
+    When I add a "second string"\
+    When I add a "third string"\
+    Then Get should be the first string
 
-- *Division*: Contiene pruebas del método Calculadora.divide()    &nbsp; &nbsp; &nbsp;    **Escenario**\
-Estructura:\
-    Given I have a Calculator\
-    When I divide 88 value 8\
-    Then the result is 11
 
-- *Factorial*: Contiene pruebas del método Calculadora.fact()    &nbsp; &nbsp; &nbsp;    **Escenario**\
-Estructura:\
-    Given I have a Calculator\
-    When I select the factorial of 3\
-    Then the result is 6
+- *Emptiness*: Contiene pruebas que comprueban el funcionamiento del buffer estando vacío    &nbsp; &nbsp; &nbsp;    **Escenario**\
+    Given I have a <string>buffer with a capacity of 88\
+    Then The buffer should be empty
 
-- *Primo*: Contiene pruebas del método Calculadora.esPrimo()    &nbsp; &nbsp; &nbsp;    **Escenario**\
-Estructura:\
-    Given I have a Calculator\
-    When I ask if 7542 is prime\
-    Then the result boolean as int is 0
+
+- *Fullness*: Contiene pruebas que comprueban el funcionamiento del buffer estando lleno     &nbsp; &nbsp; &nbsp;    **Escenario**\
+    Given I have a full buffer\
+    When I add a "element"\
+    Then I can't add the element
+
+
+
